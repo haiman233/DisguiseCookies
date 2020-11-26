@@ -68,7 +68,7 @@ public class DisguiseCookie extends JavaPlugin implements SlimefunAddon {
 
         SlimefunItemStack slimefunItem =
                 new SlimefunItemStack(
-                        "DISGUISE_COOKIE_" + type.toUpperCase(),
+                        "DISGUISE_COOKIE_" + type.toUpperCase().replace(" ", "_"),
                         new ItemStack(Material.COOKIE),
                         "&4Disguise Cookie", ChatColor.GRAY + "Type: " + type);
 
