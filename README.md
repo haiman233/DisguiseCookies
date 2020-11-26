@@ -1,20 +1,22 @@
-# Slimefun4 Addon
-This is an example Repository for a generic Slimefun4 Addon.
-In the top left is a button "Use this template", click this to create your own Addon for Slimefun4 using this basic template.
+# Slimefun4 Addon/Disguise Cookies
+This addon add a bunch of magic cookies can turn you into a friendly mob or a monster.
+Note: just disguise, you do not have ability of those mob when disguise :))
 
-## How to create your own addon.
-This is a template repository that you can use to create your own Slimefun4 Addon.<br>
-We have also written an extensive step-by-step tutorial which you can find here:<br>
-https://github.com/TheBusyBiscuit/Slimefun4/wiki/Developer-Guide
+## Features
+Disguise player to mob, i guess?
+If the disguise is bigger than you and interrupt your action, you can do /disvs (require permssion: libsdisguises.seecmd.viewself)
 
-## Changing some important things
-Navigate to `src/main/java` and rename the package and the .java File to your liking.<br>
-Suggestion: "me.yourname.yourproject" (all lower case) and "ProjectName.java"<br>
-Example: "me.thebusybiscuit.cooladdon" and "CoolAddon.java"
+## Download
+https://github.com/SentryoZ/disguise_cookie/releases
 
-Navigate to `src/main/resources/plugin.yml` and change the "author" and "main" attributes.
-You may also want to change the description to something meaningful.
+## Requirements
 
-Navigate to `pom.xml` and change the group id to "me.%Your name%" and change the artifact id to the name of your Project.
+Minecraft Version: 1.16+
+LibsDisguises: 10.0.15+
+Slimefun Version: DEV 741+
+CS-CoreLib Version: DEV 91+
 
-After that you are good to go, you can now start developing your own Addon for Slimefun4.
+# Bugs/Suggestions
+Make a new issue or pull request and contact me on discord @SentryoZ#5429
+
+Join the Slimefun Discord: https://discord.com/invite/slimefun
