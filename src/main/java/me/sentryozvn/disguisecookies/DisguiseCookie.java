@@ -25,7 +25,7 @@ public class DisguiseCookie extends JavaPlugin implements SlimefunAddon {
 //            // You could start an Auto-Updater for example
 //        }
 
-        ItemStack categoryItem = new CustomItem(Material.COOKIE, "&4Disguise Cookies", "", "&4Unstable Build", "&a> Click to open");
+        ItemStack categoryItem = new CustomItem(Material.COOKIE, "&4Disguise Cookies", "", "&a> Click to open");
 
         // Give your Category a unique id.
         NamespacedKey categoryId = new NamespacedKey(this, "disguise_cookie");
