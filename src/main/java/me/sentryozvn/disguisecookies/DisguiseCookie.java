@@ -1,9 +1,11 @@
 package me.sentryozvn.disguisecookies;
 
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
@@ -24,25 +26,58 @@ public class DisguiseCookie extends JavaPlugin implements SlimefunAddon {
 //            // You could start an Auto-Updater for example
 //        }
 
-        ItemStack categoryItem = new CustomItem(Material.COOKIE, "&4Disguise Cookies", "", "&a> Click to open");
+        ItemStack categoryItem = new CustomItem(Material.COOKIE, "&4Disguise Cookies", "", "&4Unstable Build", "&a> Click to open");
 
         // Give your Category a unique id.
         NamespacedKey categoryId = new NamespacedKey(this, "disguise_cookie");
         Category category = new Category(categoryId, categoryItem);
+//        ItemStack test = new ItemStack(Material.getMaterial("BEEF"));
 
+        //Friendly mobs
+        createCookie(category, "Bat", new ItemStack(Material.BLACK_DYE), new ItemStack(Material.FEATHER));
+        createCookie(category, "Bee", new ItemStack(Material.HONEY_BOTTLE), new ItemStack(Material.HONEY_BOTTLE));
+        createCookie(category, "Cat", new ItemStack(Material.COD), new ItemStack(Material.SALMON));
+        createCookie(category,"Chicken", new ItemStack(Material.FEATHER), new ItemStack(Material.CHICKEN));
+        createCookie(category, "Cod", new ItemStack(Material.COD_BUCKET), new ItemStack(Material.WATER_BUCKET));
         createCookie(category, "Cow", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Dolphin", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Donkey", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Fox", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Horse", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Iron Golem", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Llama", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Mule", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Ocelot", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Panda", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Parrot", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+        createCookie(category,"Pig", new ItemStack(Material.PORKCHOP), new ItemStack(Material.CARROT));
+//        createCookie(category, "Polar Bear", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Pefferfish", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Rabbit", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Salmon", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Sheep", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Snowman", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Squid", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Tropical Fish", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Turtle", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Villager", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Wandering Trader", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+//        createCookie(category, "Wolf", new ItemStack(Material.BEEF), new ItemStack(Material.LEATHER));
+
     }
+
     public void createCookie(
             Category category,
             String type,
             ItemStack material1,
             ItemStack material2
     ){
+
         SlimefunItemStack slimefunItem =
                 new SlimefunItemStack(
                         "DISGUISE_COOKIE_"+ type.toUpperCase() ,
-                        Material.COOKIE,
-                        "&4Disguise Cookie", "&7Type: " + type);
+                        new ItemStack(Material.COOKIE),
+                        "&4Disguise Cookie", ChatColor.GRAY + "Type: " + type) ;
 
         ItemStack[] recipe = {
                 SlimefunItems.MAGIC_LUMP_3,
