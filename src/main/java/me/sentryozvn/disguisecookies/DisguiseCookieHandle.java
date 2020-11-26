@@ -44,7 +44,6 @@ public class DisguiseCookieHandle extends SlimefunItem {
             }
         }
 
-
         if(type != null){
             //Start disguise
             MobDisguise mobDisguise = new MobDisguise(DisguiseType.getType(EntityType.valueOf(type)));
